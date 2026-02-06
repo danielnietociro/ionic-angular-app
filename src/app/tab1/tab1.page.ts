@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { RemoteConfigService } from '../services/remote-config.service';
 
 @Component({
   selector: 'app-tab1',
@@ -6,12 +7,19 @@ import { Component } from '@angular/core';
   styleUrls: ['tab1.page.scss'],
   standalone: false,
 })
-export class Tab1Page {
+export class Tab1Page implements OnInit {
 
   newTask: string = '';
   tasks: { text: string; completed: boolean; editing: boolean }[] = [];
+  featureEnabled: boolean = false;
 
-  constructor() {}
+  constructor(private remoteConfigService: RemoteConfigService) {}
+
+  ngOnInit() {
+    this.remoteConfigService.getFeatureFlag('enable_task_feature').subscribe(enabled => {
+      this.featureEnabled = enabled;
+    });
+  }
 
   addTask() {
     if (this.newTask.trim()) {
