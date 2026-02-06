@@ -181,14 +181,10 @@ Durante el desarrollo de esta aplicación híbrida, se realizaron los siguientes
 - **Componentes de Ionic**: Se utilizaron componentes de Ionic como `ion-tabs`, `ion-tab-bar`, `ion-tab-button` para una experiencia de usuario intuitiva y nativa.
 
 ### Configuración del Proyecto
-- **Capacitor**: Se configuró Capacitor para el desarrollo híbrido, permitiendo la compilación nativa para Android e iOS.
+- **Cordova**: Se configuró cordoba para el desarrollo híbrido, permitiendo la compilación nativa para Android e iOS.
 - **Dependencias**: Se agregaron dependencias como `@angular/fire` para Firebase, y se configuraron los scripts de npm para desarrollo y producción.
 
 ### Mejoras Adicionales
-- **Experiencia de Usuario**: La aplicación ofrece una interfaz intuitiva con navegación por tabs, compatible con dispositivos móviles y web.
+- **Experiencia de Usuario**: La aplicación ofrece una interfaz intuitiva con navegación sensilla, compatible con dispositivos móviles y web.
 - **Rendimiento**: Se optimizó el manejo de datos con servicios asíncronos y configuración remota para actualizaciones en tiempo real.
 - **Versionamiento y Configuración en la Nube**: Se implementó Git para versionamiento y Firebase para configuración en la nube, permitiendo despliegues continuos y actualizaciones remotas.
-
-## Licencia
-
-Este proyecto está bajo la Licencia MIT.
