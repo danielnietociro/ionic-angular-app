@@ -200,9 +200,9 @@ Durante el desarrollo de esta aplicación híbrida, se realizaron los siguientes
 - **<img width="368" height="848" alt="image" src="https://github.com/user-attachments/assets/0eabf439-039f-4ad4-ba82-8407a5404e31" />**
 - **<img width="367" height="816" alt="image" src="https://github.com/user-attachments/assets/e902ea20-9127-4389-9e20-00c845ce8829" />**
 - **Editar Task**:
-**<img width="387" height="820" alt="image" src="https://github.com/user-attachments/assets/7e749b76-7a69-4257-a0f6-fec850c77439" />**
-**<img width="388" height="844" alt="image" src="https://github.com/user-attachments/assets/4800c068-fca6-49c0-99a8-8cf5150b442a" />**
-**<img width="384" height="823" alt="image" src="https://github.com/user-attachments/assets/b54cdb2d-ecd8-432a-a909-9ba9d2915e1c" />**
+- **<img width="387" height="820" alt="image" src="https://github.com/user-attachments/assets/7e749b76-7a69-4257-a0f6-fec850c77439" />**
+- **<img width="388" height="844" alt="image" src="https://github.com/user-attachments/assets/4800c068-fca6-49c0-99a8-8cf5150b442a" />**
+- **<img width="384" height="823" alt="image" src="https://github.com/user-attachments/assets/b54cdb2d-ecd8-432a-a909-9ba9d2915e1c" />**
 - **Eliminar task**:
 - **<img width="383" height="833" alt="image" src="https://github.com/user-attachments/assets/24322fdd-b538-4856-88f0-57a4dbcc683a" />**
 - **<img width="374" height="796" alt="image" src="https://github.com/user-attachments/assets/a5e9ebb6-0c3e-4c01-9591-c8b24ced8fb8" />**
