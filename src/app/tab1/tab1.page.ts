@@ -10,7 +10,7 @@ import { RemoteConfigService } from '../services/remote-config.service';
 export class Tab1Page implements OnInit {
 
   newTask: string = '';
-  tasks: { text: string; completed: boolean; editing: boolean }[] = [];
+  tasks: { id: number; text: string; completed: boolean; editing: boolean }[] = [];
   featureEnabled: boolean = false;
 
   constructor(private remoteConfigService: RemoteConfigService) {}
@@ -23,28 +23,35 @@ export class Tab1Page implements OnInit {
 
   addTask() {
     if (this.newTask.trim()) {
-      this.tasks.push({ text: this.newTask, completed: false, editing: false });
+      this.tasks.push({ id: Date.now(), text: this.newTask, completed: false, editing: false });
       this.newTask = '';
     }
   }
 
-  toggleTask(index: number) {
-    this.tasks[index].completed = !this.tasks[index].completed;
+  toggleTask(task: { id: number; text: string; completed: boolean; editing: boolean }) {
+    task.completed = !task.completed;
   }
 
-  deleteTask(index: number) {
-    this.tasks.splice(index, 1);
-  }
-
-  editTask(index: number) {
-    this.tasks[index].editing = !this.tasks[index].editing;
-  }
-
-  saveTask(index: number, newText: string) {
-    if (newText.trim()) {
-      this.tasks[index].text = newText.trim();
+  deleteTask(task: { id: number; text: string; completed: boolean; editing: boolean }) {
+    const index = this.tasks.findIndex(t => t.id === task.id);
+    if (index !== -1) {
+      this.tasks.splice(index, 1);
     }
-    this.tasks[index].editing = false;
+  }
+
+  editTask(task: { id: number; text: string; completed: boolean; editing: boolean }) {
+    task.editing = !task.editing;
+  }
+
+  saveTask(task: { id: number; text: string; completed: boolean; editing: boolean }, newText: string) {
+    if (newText.trim()) {
+      task.text = newText.trim();
+    }
+    task.editing = false;
+  }
+
+  trackByFn(index: number, item: { id: number; text: string; completed: boolean; editing: boolean }): number {
+    return item.id;
   }
 
 }
